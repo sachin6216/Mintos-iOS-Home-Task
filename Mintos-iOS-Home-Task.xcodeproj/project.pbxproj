@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04383FA52A8FBE1600CDA1E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FA42A8FBE1600CDA1E7 /* AppDelegate.swift */; };
+		04383FA72A8FBE1600CDA1E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FA62A8FBE1600CDA1E7 /* SceneDelegate.swift */; };
+		04383FAE2A8FBE1900CDA1E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04383FAD2A8FBE1900CDA1E7 /* Assets.xcassets */; };
+		04383FB12A8FBE1900CDA1E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04383FAF2A8FBE1900CDA1E7 /* LaunchScreen.storyboard */; };
+		04383FBC2A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FBB2A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskTests.swift */; };
+		04383FC62A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FC52A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITests.swift */; };
+		04383FC82A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FC72A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITestsLaunchTests.swift */; };
+		04383FE52A8FBF9200CDA1E7 /* Network Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FE42A8FBF9200CDA1E7 /* Network Constant.swift */; };
+		04383FE72A8FBFA100CDA1E7 /* PaymentEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FE62A8FBFA100CDA1E7 /* PaymentEndPoint.swift */; };
+		04383FEB2A8FBFBE00CDA1E7 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04383FEA2A8FBFBE00CDA1E7 /* Payment.storyboard */; };
+		04383FED2A8FBFD200CDA1E7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FEC2A8FBFD200CDA1E7 /* PaymentViewController.swift */; };
+		04383FEF2A8FBFF400CDA1E7 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FEE2A8FBFF400CDA1E7 /* PaymentTableViewCell.swift */; };
+		04383FF22A8FC02B00CDA1E7 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FF12A8FC02B00CDA1E7 /* PaymentViewModel.swift */; };
+		04383FF42A8FC03500CDA1E7 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FF32A8FC03500CDA1E7 /* PaymentModel.swift */; };
+		04383FF62A8FC92200CDA1E7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04383FF52A8FC92200CDA1E7 /* APIManager.swift */; };
+		04620C452A93FEFA00F1D731 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C212A93FEF700F1D731 /* OpenSans-BoldItalic.ttf */; };
+		04620C462A93FEFA00F1D731 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C222A93FEF700F1D731 /* OpenSans-ExtraBold.ttf */; };
+		04620C4E2A93FEFA00F1D731 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C2A2A93FEF700F1D731 /* OpenSans-Light.ttf */; };
+		04620C4F2A93FEFA00F1D731 /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C2B2A93FEF700F1D731 /* OpenSans-MediumItalic.ttf */; };
+		04620C502A93FEFA00F1D731 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C2C2A93FEF700F1D731 /* OpenSans-ExtraBoldItalic.ttf */; };
+		04620C532A93FEFA00F1D731 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C2F2A93FEF800F1D731 /* OpenSans-LightItalic.ttf */; };
+		04620C552A93FEFA00F1D731 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C312A93FEF800F1D731 /* OpenSans-Italic.ttf */; };
+		04620C592A93FEFA00F1D731 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C352A93FEF900F1D731 /* OpenSans-Medium.ttf */; };
+		04620C5F2A93FEFA00F1D731 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C3B2A93FEF900F1D731 /* OpenSans-Regular.ttf */; };
+		04620C602A93FEFA00F1D731 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C3C2A93FEF900F1D731 /* OpenSans-SemiBold.ttf */; };
+		04620C612A93FEFA00F1D731 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C3D2A93FEF900F1D731 /* OpenSans-SemiBoldItalic.ttf */; };
+		04620C642A93FEFA00F1D731 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04620C402A93FEFA00F1D731 /* OpenSans-Bold.ttf */; };
+		04620C692A94073500F1D731 /* ExtensionClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04620C682A94073500F1D731 /* ExtensionClasses.swift */; };
+		04620C6C2A94077100F1D731 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04620C6B2A94077100F1D731 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04383FB82A8FBE1A00CDA1E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04383F992A8FBE1600CDA1E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04383FA02A8FBE1600CDA1E7;
+			remoteInfo = "Mintos-iOS-Home-Task";
+		};
+		04383FC22A8FBE1A00CDA1E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04383F992A8FBE1600CDA1E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04383FA02A8FBE1600CDA1E7;
+			remoteInfo = "Mintos-iOS-Home-Task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04383FA12A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mintos-iOS-Home-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04383FA42A8FBE1600CDA1E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04383FA62A8FBE1600CDA1E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04383FAD2A8FBE1900CDA1E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04383FB02A8FBE1900CDA1E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04383FB22A8FBE1900CDA1E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04383FB72A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mintos-iOS-Home-TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04383FBB2A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mintos_iOS_Home_TaskTests.swift; sourceTree = "<group>"; };
+		04383FC12A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mintos-iOS-Home-TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04383FC52A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mintos_iOS_Home_TaskUITests.swift; sourceTree = "<group>"; };
+		04383FC72A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mintos_iOS_Home_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04383FE42A8FBF9200CDA1E7 /* Network Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Constant.swift"; sourceTree = "<group>"; };
+		04383FE62A8FBFA100CDA1E7 /* PaymentEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentEndPoint.swift; sourceTree = "<group>"; };
+		04383FEA2A8FBFBE00CDA1E7 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		04383FEC2A8FBFD200CDA1E7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		04383FEE2A8FBFF400CDA1E7 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		04383FF12A8FC02B00CDA1E7 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		04383FF32A8FC03500CDA1E7 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		04383FF52A8FC92200CDA1E7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		04620C212A93FEF700F1D731 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		04620C222A93FEF700F1D731 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		04620C2A2A93FEF700F1D731 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		04620C2B2A93FEF700F1D731 /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		04620C2C2A93FEF700F1D731 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		04620C2F2A93FEF800F1D731 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		04620C312A93FEF800F1D731 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		04620C352A93FEF900F1D731 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		04620C3B2A93FEF900F1D731 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		04620C3C2A93FEF900F1D731 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		04620C3D2A93FEF900F1D731 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		04620C402A93FEFA00F1D731 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		04620C682A94073500F1D731 /* ExtensionClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionClasses.swift; sourceTree = "<group>"; };
+		04620C6B2A94077100F1D731 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04383F9E2A8FBE1600CDA1E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04383FB42A8FBE1A00CDA1E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04383FBE2A8FBE1A00CDA1E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04383F982A8FBE1600CDA1E7 = {
+			isa = PBXGroup;
+			children = (
+				04383FA32A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task */,
+				04383FBA2A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests */,
+				04383FC42A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests */,
+				04383FA22A8FBE1600CDA1E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04383FA22A8FBE1600CDA1E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04383FA12A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task.app */,
+				04383FB72A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests.xctest */,
+				04383FC12A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04383FA32A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task */ = {
+			isa = PBXGroup;
+			children = (
+				04383FDF2A8FBF5300CDA1E7 /* Helper Classes */,
+				04383FD52A8FBEF700CDA1E7 /* MVVM */,
+				04383FD42A8FBEE300CDA1E7 /* Supporting Files */,
+				04383FAD2A8FBE1900CDA1E7 /* Assets.xcassets */,
+				04383FAF2A8FBE1900CDA1E7 /* LaunchScreen.storyboard */,
+				04383FB22A8FBE1900CDA1E7 /* Info.plist */,
+			);
+			path = "Mintos-iOS-Home-Task";
+			sourceTree = "<group>";
+		};
+		04383FBA2A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				04383FBB2A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskTests.swift */,
+			);
+			path = "Mintos-iOS-Home-TaskTests";
+			sourceTree = "<group>";
+		};
+		04383FC42A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04383FC52A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITests.swift */,
+				04383FC72A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITestsLaunchTests.swift */,
+			);
+			path = "Mintos-iOS-Home-TaskUITests";
+			sourceTree = "<group>";
+		};
+		04383FD42A8FBEE300CDA1E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04383FA42A8FBE1600CDA1E7 /* AppDelegate.swift */,
+				04383FA62A8FBE1600CDA1E7 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04383FD52A8FBEF700CDA1E7 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				04383FD92A8FBF1A00CDA1E7 /* View */,
+				04383FD82A8FBF1400CDA1E7 /* View Model */,
+				04383FD62A8FBF0500CDA1E7 /* Model */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		04383FD62A8FBF0500CDA1E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04383FDC2A8FBF3700CDA1E7 /* Payment */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04383FD82A8FBF1400CDA1E7 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				04383FDB2A8FBF2D00CDA1E7 /* Payment */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		04383FD92A8FBF1A00CDA1E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04383FDA2A8FBF2600CDA1E7 /* Payment */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04383FDA2A8FBF2600CDA1E7 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				04383FE92A8FBFB100CDA1E7 /* Cell Classes */,
+				04383FE82A8FBFAA00CDA1E7 /* Controller */,
+				04383FEA2A8FBFBE00CDA1E7 /* Payment.storyboard */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		04383FDB2A8FBF2D00CDA1E7 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				04383FF12A8FC02B00CDA1E7 /* PaymentViewModel.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		04383FDC2A8FBF3700CDA1E7 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				04383FF32A8FC03500CDA1E7 /* PaymentModel.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		04383FDF2A8FBF5300CDA1E7 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04620C6A2A94076300F1D731 /* Localize */,
+				04620C672A94071D00F1D731 /* Extension Classes */,
+				04620C1E2A93FEE000F1D731 /* Fonts */,
+				04383FE02A8FBF5D00CDA1E7 /* Networking */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		04383FE02A8FBF5D00CDA1E7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04383FE12A8FBF6600CDA1E7 /* EndPoints */,
+				04383FE42A8FBF9200CDA1E7 /* Network Constant.swift */,
+				04383FF52A8FC92200CDA1E7 /* APIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		04383FE12A8FBF6600CDA1E7 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				04383FE62A8FBFA100CDA1E7 /* PaymentEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		04383FE82A8FBFAA00CDA1E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04383FEC2A8FBFD200CDA1E7 /* PaymentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04383FE92A8FBFB100CDA1E7 /* Cell Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04383FEE2A8FBFF400CDA1E7 /* PaymentTableViewCell.swift */,
+			);
+			path = "Cell Classes";
+			sourceTree = "<group>";
+		};
+		04620C1E2A93FEE000F1D731 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04620C402A93FEFA00F1D731 /* OpenSans-Bold.ttf */,
+				04620C212A93FEF700F1D731 /* OpenSans-BoldItalic.ttf */,
+				04620C222A93FEF700F1D731 /* OpenSans-ExtraBold.ttf */,
+				04620C2C2A93FEF700F1D731 /* OpenSans-ExtraBoldItalic.ttf */,
+				04620C312A93FEF800F1D731 /* OpenSans-Italic.ttf */,
+				04620C2A2A93FEF700F1D731 /* OpenSans-Light.ttf */,
+				04620C2F2A93FEF800F1D731 /* OpenSans-LightItalic.ttf */,
+				04620C352A93FEF900F1D731 /* OpenSans-Medium.ttf */,
+				04620C2B2A93FEF700F1D731 /* OpenSans-MediumItalic.ttf */,
+				04620C3B2A93FEF900F1D731 /* OpenSans-Regular.ttf */,
+				04620C3C2A93FEF900F1D731 /* OpenSans-SemiBold.ttf */,
+				04620C3D2A93FEF900F1D731 /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		04620C672A94071D00F1D731 /* Extension Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04620C682A94073500F1D731 /* ExtensionClasses.swift */,
+			);
+			path = "Extension Classes";
+			sourceTree = "<group>";
+		};
+		04620C6A2A94076300F1D731 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				04620C6B2A94077100F1D731 /* Localizable.strings */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04383FA02A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04383FCB2A8FBE1A00CDA1E7 /* Build configuration list for PBXNativeTarget "Mintos-iOS-Home-Task" */;
+			buildPhases = (
+				04383F9D2A8FBE1600CDA1E7 /* Sources */,
+				04383F9E2A8FBE1600CDA1E7 /* Frameworks */,
+				04383F9F2A8FBE1600CDA1E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mintos-iOS-Home-Task";
+			productName = "Mintos-iOS-Home-Task";
+			productReference = 04383FA12A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04383FB62A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04383FCE2A8FBE1A00CDA1E7 /* Build configuration list for PBXNativeTarget "Mintos-iOS-Home-TaskTests" */;
+			buildPhases = (
+				04383FB32A8FBE1A00CDA1E7 /* Sources */,
+				04383FB42A8FBE1A00CDA1E7 /* Frameworks */,
+				04383FB52A8FBE1A00CDA1E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04383FB92A8FBE1A00CDA1E7 /* PBXTargetDependency */,
+			);
+			name = "Mintos-iOS-Home-TaskTests";
+			productName = "Mintos-iOS-Home-TaskTests";
+			productReference = 04383FB72A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04383FC02A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04383FD12A8FBE1A00CDA1E7 /* Build configuration list for PBXNativeTarget "Mintos-iOS-Home-TaskUITests" */;
+			buildPhases = (
+				04383FBD2A8FBE1A00CDA1E7 /* Sources */,
+				04383FBE2A8FBE1A00CDA1E7 /* Frameworks */,
+				04383FBF2A8FBE1A00CDA1E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04383FC32A8FBE1A00CDA1E7 /* PBXTargetDependency */,
+			);
+			name = "Mintos-iOS-Home-TaskUITests";
+			productName = "Mintos-iOS-Home-TaskUITests";
+			productReference = 04383FC12A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04383F992A8FBE1600CDA1E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					04383FA02A8FBE1600CDA1E7 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					04383FB62A8FBE1A00CDA1E7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 04383FA02A8FBE1600CDA1E7;
+					};
+					04383FC02A8FBE1A00CDA1E7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 04383FA02A8FBE1600CDA1E7;
+					};
+				};
+			};
+			buildConfigurationList = 04383F9C2A8FBE1600CDA1E7 /* Build configuration list for PBXProject "Mintos-iOS-Home-Task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04383F982A8FBE1600CDA1E7;
+			productRefGroup = 04383FA22A8FBE1600CDA1E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04383FA02A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task */,
+				04383FB62A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskTests */,
+				04383FC02A8FBE1A00CDA1E7 /* Mintos-iOS-Home-TaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04383F9F2A8FBE1600CDA1E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04620C552A93FEFA00F1D731 /* OpenSans-Italic.ttf in Resources */,
+				04620C4F2A93FEFA00F1D731 /* OpenSans-MediumItalic.ttf in Resources */,
+				04620C642A93FEFA00F1D731 /* OpenSans-Bold.ttf in Resources */,
+				04620C502A93FEFA00F1D731 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				04620C452A93FEFA00F1D731 /* OpenSans-BoldItalic.ttf in Resources */,
+				04383FEB2A8FBFBE00CDA1E7 /* Payment.storyboard in Resources */,
+				04620C462A93FEFA00F1D731 /* OpenSans-ExtraBold.ttf in Resources */,
+				04620C612A93FEFA00F1D731 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				04620C602A93FEFA00F1D731 /* OpenSans-SemiBold.ttf in Resources */,
+				04620C4E2A93FEFA00F1D731 /* OpenSans-Light.ttf in Resources */,
+				04620C592A93FEFA00F1D731 /* OpenSans-Medium.ttf in Resources */,
+				04620C5F2A93FEFA00F1D731 /* OpenSans-Regular.ttf in Resources */,
+				04383FB12A8FBE1900CDA1E7 /* LaunchScreen.storyboard in Resources */,
+				04620C6C2A94077100F1D731 /* Localizable.strings in Resources */,
+				04620C532A93FEFA00F1D731 /* OpenSans-LightItalic.ttf in Resources */,
+				04383FAE2A8FBE1900CDA1E7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04383FB52A8FBE1A00CDA1E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04383FBF2A8FBE1A00CDA1E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04383F9D2A8FBE1600CDA1E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04383FE52A8FBF9200CDA1E7 /* Network Constant.swift in Sources */,
+				04383FA52A8FBE1600CDA1E7 /* AppDelegate.swift in Sources */,
+				04620C692A94073500F1D731 /* ExtensionClasses.swift in Sources */,
+				04383FEF2A8FBFF400CDA1E7 /* PaymentTableViewCell.swift in Sources */,
+				04383FF62A8FC92200CDA1E7 /* APIManager.swift in Sources */,
+				04383FED2A8FBFD200CDA1E7 /* PaymentViewController.swift in Sources */,
+				04383FF42A8FC03500CDA1E7 /* PaymentModel.swift in Sources */,
+				04383FA72A8FBE1600CDA1E7 /* SceneDelegate.swift in Sources */,
+				04383FF22A8FC02B00CDA1E7 /* PaymentViewModel.swift in Sources */,
+				04383FE72A8FBFA100CDA1E7 /* PaymentEndPoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04383FB32A8FBE1A00CDA1E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04383FBC2A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04383FBD2A8FBE1A00CDA1E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04383FC82A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITestsLaunchTests.swift in Sources */,
+				04383FC62A8FBE1A00CDA1E7 /* Mintos_iOS_Home_TaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04383FB92A8FBE1A00CDA1E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04383FA02A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task */;
+			targetProxy = 04383FB82A8FBE1A00CDA1E7 /* PBXContainerItemProxy */;
+		};
+		04383FC32A8FBE1A00CDA1E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04383FA02A8FBE1600CDA1E7 /* Mintos-iOS-Home-Task */;
+			targetProxy = 04383FC22A8FBE1A00CDA1E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04383FAF2A8FBE1900CDA1E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04383FB02A8FBE1900CDA1E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04383FC92A8FBE1A00CDA1E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04383FCA2A8FBE1A00CDA1E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04383FCC2A8FBE1A00CDA1E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mintos-iOS-Home-Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Payment;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachin.Mintos-iOS-Home-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04383FCD2A8FBE1A00CDA1E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mintos-iOS-Home-Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Payment;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachin.Mintos-iOS-Home-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04383FCF2A8FBE1A00CDA1E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachin.Mintos-iOS-Home-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mintos-iOS-Home-Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mintos-iOS-Home-Task";
+			};
+			name = Debug;
+		};
+		04383FD02A8FBE1A00CDA1E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachin.Mintos-iOS-Home-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mintos-iOS-Home-Task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mintos-iOS-Home-Task";
+			};
+			name = Release;
+		};
+		04383FD22A8FBE1A00CDA1E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachin.Mintos-iOS-Home-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mintos-iOS-Home-Task";
+			};
+			name = Debug;
+		};
+		04383FD32A8FBE1A00CDA1E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachin.Mintos-iOS-Home-TaskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mintos-iOS-Home-Task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04383F9C2A8FBE1600CDA1E7 /* Build configuration list for PBXProject "Mintos-iOS-Home-Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04383FC92A8FBE1A00CDA1E7 /* Debug */,
+				04383FCA2A8FBE1A00CDA1E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04383FCB2A8FBE1A00CDA1E7 /* Build configuration list for PBXNativeTarget "Mintos-iOS-Home-Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04383FCC2A8FBE1A00CDA1E7 /* Debug */,
+				04383FCD2A8FBE1A00CDA1E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04383FCE2A8FBE1A00CDA1E7 /* Build configuration list for PBXNativeTarget "Mintos-iOS-Home-TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04383FCF2A8FBE1A00CDA1E7 /* Debug */,
+				04383FD02A8FBE1A00CDA1E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04383FD12A8FBE1A00CDA1E7 /* Build configuration list for PBXNativeTarget "Mintos-iOS-Home-TaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04383FD22A8FBE1A00CDA1E7 /* Debug */,
+				04383FD32A8FBE1A00CDA1E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04383F992A8FBE1600CDA1E7 /* Project object */;
+}

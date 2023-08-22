@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Mintos-iOS-Home-Task
+
+  Created by Sachin on 21/08/2023.
+  
+*/
+"CURRENCY" = "Currency";
+"BANKTRANSFER" = "Bank transfer";
+"TRANSFERMONEYFROMYOURBANK" = "Transfer money from your bank account to your Mintos account.";
+"ADDTHISINFORMATIONTOPAYMENT" = "Add this information to payment details";
+"BENEFICIARYBANKACCOUNT" = "Beneficiary bank account number/IBAN";
+"BIICODE" = "Beneficiary bank SWIFT/BIC code";
+"BENEFICIARYNAEM" = "Beneficiary name";
+"BENEFICIARYBANKADDRESS" = "Beneficiary bank address";
+"OK" = "Ok";
+"TEXTHASBEENCOPIEDSUCCESSFULLY" = "Text has been copied successfully.";
+
