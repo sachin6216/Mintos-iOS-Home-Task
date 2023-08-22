@@ -6,15 +6,17 @@
 //
 
 import XCTest
+
 @testable import Mintos_iOS_Home_Task
 
 final class Mintos_iOS_Home_TaskTests: XCTestCase {
     var viewModel: PaymentViewModel!
-    
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
         viewModel = PaymentViewModel()
+
     }
     
     override func tearDownWithError() throws {
@@ -50,6 +52,38 @@ final class Mintos_iOS_Home_TaskTests: XCTestCase {
         let bankNameValue = viewModel.model.bankDetailsList.first?.bankAccounts[0].value
         XCTAssertEqual(bankNameTitle, "BANKNAME".localized)
         XCTAssertEqual(bankNameValue, "Bank")
+    }
+    
+    func testInvalidResponseHandling() {
+           // Test handling an invalid response with no paymentDetails and no items
+           let invalidResponse = Response(paymentDetails: nil, items: nil)
+           viewModel.handleBankAccountResponse(invalidResponse)
+
+           XCTAssertTrue(viewModel.model.currencyList.isEmpty)
+           XCTAssertNil(viewModel.model.bankAccountsByCurrency["USD"])
+       }
+
+    func testSortBankAccountWithInvalidCurrency() {
+        // Create a mock bank account with an invalid currency
+        let invalidCurrencyItem = Item(bank: "Bank", swift: "SWIFT", currency: nil, beneficiaryName: "Name", beneficiaryBankAddress: "Address", iban: "IBAN")
+        viewModel.model.bankAccountsByCurrency["InvalidCurrency"] = [invalidCurrencyItem]
+        
+        // Perform the sorting operation
+        viewModel.sortBankAccount()
+        
+        // Assert that the bankDetailsList is empty
+        XCTAssertTrue(viewModel.model.bankDetailsList.isEmpty)
+    }
+    
+    
+    func testSortingWithNoSelectedCurrency() {
+        // Create a mock bank account
+        let item = Item(bank: "Bank", swift: "SWIFT", currency: "USD", beneficiaryName: "Name", beneficiaryBankAddress: "Address", iban: "IBAN")
+        viewModel.model.bankAccountsByCurrency["USD"] = [item]
+//        viewModel.model.selectedCurrency = "USD"
+        viewModel.sortBankAccount()
+        
+        XCTAssertEqual(viewModel.model.bankDetailsList.count, 0)
     }
     
 }

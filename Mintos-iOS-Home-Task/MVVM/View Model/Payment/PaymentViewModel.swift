@@ -83,7 +83,7 @@ class PaymentViewModel {
     }
     
     /// Handles API errors and sends appropriate error messages.
-    private func handleAPIError(_ error: Error) {
+    func handleAPIError(_ error: Error) {
         if let apiError = error as? APIError {
             if let message = apiError.errorMessage {
                 self.errorSubject.send(message)

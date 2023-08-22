@@ -46,19 +46,12 @@ class PaymentViewController: UIViewController {
     @IBAction func btnCopyInvestor(_ sender: UIButton) {
         if let investorId = viewModel.model.investorId {
             UIPasteboard.general.string = investorId
-            self.showalertview(messagestring: "TEXTHASBEENCOPIEDSUCCESSFULLY".localized)
+            self.showalertview(messagestring: "\("INVESTORID".localized) \"\(investorId)\" \("TEXTHASBEENCOPIEDSUCCESSFULLY".localized)")
         }
     }
     
     @IBAction func btnSortCurrency(_ sender: UIButton) {
-        
-        if #available(iOS 14.0, *) {
-            self.btnSortCurrency.showsMenuAsPrimaryAction = true
-            self.btnSortCurrency.menu = self.showMenu()
-        } else {
             self.showActionSheet(sender: sender)
-        }
-        
     }
     // MARK: - Extra Method
     /// Perform initial UI setup.
@@ -80,7 +73,7 @@ class PaymentViewController: UIViewController {
     /// Show an action sheet for sorting currencies.
     /// - Parameter sender: The button triggering the action sheet.
     private func showActionSheet(sender: UIButton) {
-        let alertController = UIAlertController(title: "Menu", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Sort", message: nil, preferredStyle: .actionSheet)
         
         // Create UIAlertAction instances from the option titles and add them to the alertController
         self.viewModel.model.currencyList.forEach { title in
@@ -104,23 +97,7 @@ class PaymentViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    /// Create and return a UIMenu for sorting currencies.
-    private func showMenu() -> UIMenu {
-        // Create an array of UIAction instances from the option titles
-        let actions = self.viewModel.model.currencyList.map { title in
-            UIAction(title: title) { action in
-                self.lblCurrencyValue.text = title
-                self.viewModel.model.selectedCurrency = title
-                self.viewModel.sortBankAccount()
-                
-            }
-        }
-        
-        return UIMenu(title: "Menu", children: actions)
-    }
-
     private func updateBankAccountDetails() {
-        print("msg")
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
@@ -209,8 +186,9 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
 extension PaymentViewController: PaymentTableViewCellDelegate {
     func paymentCellDidCopyBankDetails(at indexPath: IndexPath?) {
         if let indexPath = indexPath {
-            UIPasteboard.general.string = self.viewModel.model.bankDetailsList[indexPath.section].bankAccounts[indexPath.row].value
-            self.showalertview(messagestring: "TEXTHASBEENCOPIEDSUCCESSFULLY".localized)
+            let selectedItem = self.viewModel.model.bankDetailsList[indexPath.section].bankAccounts[indexPath.row]
+            UIPasteboard.general.string = selectedItem.value
+            self.showalertview(messagestring: "\(selectedItem.title) \"\(selectedItem.value)\" \("TEXTHASBEENCOPIEDSUCCESSFULLY".localized)")
         }
     }
 }

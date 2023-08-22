@@ -14,5 +14,8 @@
 "BENEFICIARYNAEM" = "Beneficiary name";
 "BENEFICIARYBANKADDRESS" = "Beneficiary bank address";
 "OK" = "Ok";
-"TEXTHASBEENCOPIEDSUCCESSFULLY" = "Text has been copied successfully.";
-
+"TEXTHASBEENCOPIEDSUCCESSFULLY" = "has been copied successfully.";
+"INVESTORID" = "Investor ID";
+"" = "";
+"" = "";
+"" = "";

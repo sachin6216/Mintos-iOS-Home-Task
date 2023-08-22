@@ -12,7 +12,7 @@ class PaymentModel {
     var bankDetalisResponse: Response?
     var investorId: String?
     var bankAccountsByCurrency = [String: [Item]]()
-var selectedCurrency = ""
+    var selectedCurrency = ""
 }
 // MARK: - GetBankAccountResponse
 struct GetBankAccountResponse: Codable {

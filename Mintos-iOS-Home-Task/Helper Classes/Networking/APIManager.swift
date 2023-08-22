@@ -9,8 +9,6 @@ import Foundation
 class APIManager {
     private var session: URLSession!
     private var dataTask: URLSessionDataTask?
-    private var downloadTask: URLSessionDownloadTask?
-    private var resumeData: Data?
     
     var method: HTTPMethod
     var path: String
