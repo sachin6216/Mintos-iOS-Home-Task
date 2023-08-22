@@ -11,7 +11,7 @@ import Foundation
 struct ApisURL {
     // Base Url
     // MARK: - App URL's
-    static let baseURl = "https://mintos-mobile.s3.eu-central-1.amazonaws.com" // Local
+    static let baseURl = "https://mintos-mobile.s3.eu-central-1.amazonaws.com" 
     
     enum ServiceUrls: String {
         // MARK: - Common URLs
