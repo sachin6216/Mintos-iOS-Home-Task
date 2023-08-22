@@ -11,9 +11,8 @@ class PaymentModel {
     var currencyList = [String]()
     var bankDetalisResponse: Response?
     var investorId: String?
-    var bankAccountsByCurrency: [String: [Item]] = [:]
+    var bankAccountsByCurrency = [String: [Item]]()
 var selectedCurrency = ""
-    var selectedSectionIndex = 0
 }
 // MARK: - GetBankAccountResponse
 struct GetBankAccountResponse: Codable {
@@ -21,7 +20,11 @@ struct GetBankAccountResponse: Codable {
 }
 
 // MARK: - Response
-struct Response: Codable {
+struct Response: Codable, Equatable {
+    static func == (lhs: Response, rhs: Response) -> Bool {
+        return true
+    }
+    
     let paymentDetails: String?
     let items: [Item]?
 }

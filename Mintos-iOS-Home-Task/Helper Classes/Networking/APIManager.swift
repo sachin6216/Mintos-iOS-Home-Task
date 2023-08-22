@@ -59,79 +59,17 @@ class APIManager {
                 }
             }
             
-//            do {
-//                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-//                completion(.success(decodedResponse))
-//            } catch let error {
-//                print(error)
-//                if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? T {
-//                    completion(.success(jsonData))
-//                } else {
-//                    completion(.failure(APIError.decodingError))
-//                }
-//                completion(.failure(APIError.decodingError))
-//            }
-            
-            
-            
-            
-            
-            
             do {
-                let jsonData = """
-                {
-                  "response": {
-                    "paymentDetails": "Investor ID: 54361338",
-                    "items": [
-                      {
-                        "bank": "Acme Bank",
-                        "swift": "ACMEUS33",
-                        "currency": "EUR",
-                        "beneficiaryName": "AS Mintos Marketplace",
-                        "beneficiaryBankAddress": "10 Rue de la Paix, 75002 Paris, France",
-                        "iban": "GB29NWBK60161331926819"
-                      },
-                      {
-                        "bank": "City Bank",
-                        "swift": "eqweqweqwe",
-                        "currency": "USD",
-                        "beneficiaryName": "AS Mintos Marketplace",
-                        "beneficiaryBankAddress": "123 Main Street, New York, NY, USA",
-                        "iban": "US12345678901234567890"
-                      },
-                {
-                        "bank": "City Bank",
-                        "swift": "CITdasdsadasdIUS33",
-                        "currency": "USD",
-                        "beneficiaryName": "AS Mintos Marketplace",
-                        "beneficiaryBankAddress": "123 Main Street, New York, NY, USA",
-                        "iban": "US12345678901234567890"
-                      },
-                                      {
-                                        "bank": "City Bank",
-                                        "swift": "CITIUS33",
-                                        "currency": "USD",
-                                        "beneficiaryName": "AS Mintos Marketplace",
-                                        "beneficiaryBankAddress": "123 Main Street, New York, NY, USA",
-                                        "iban": "4324234234234"
-                                      },
-                      {
-                        "bank": "EuroBank Poland",
-                        "swift": "EURBPLPW",
-                        "currency": "PLN",
-                        "beneficiaryName": "AS Mintos Marketplace",
-                        "beneficiaryBankAddress": "567 Maple Avenue, Warsaw, Poland",
-                        "iban": "PL87654321098765432109"
-                      }
-                    ]
-                  }
+                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedResponse))
+            } catch let error {
+                print(error)
+                if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? T {
+                    completion(.success(jsonData))
+                } else {
+                    completion(.failure(APIError.decodingError))
                 }
-                """.data(using: .utf8)!
-                let decoder = JSONDecoder()
-                let response = try decoder.decode(T.self, from: jsonData)
-                completion(.success(response))
-            } catch {
-                print("Error decoding JSON: \(error)")
+                completion(.failure(APIError.decodingError))
             }
         }
         

@@ -87,7 +87,7 @@ class PaymentViewController: UIViewController {
             let action = UIAlertAction(title: title, style: .default) { _ in
                 self.lblCurrencyValue.text = title
                 self.viewModel.model.selectedCurrency = title
-                self.sortBankAccount()
+                self.viewModel.sortBankAccount()
                 
             }
             alertController.addAction(action)
@@ -111,49 +111,14 @@ class PaymentViewController: UIViewController {
             UIAction(title: title) { action in
                 self.lblCurrencyValue.text = title
                 self.viewModel.model.selectedCurrency = title
-                self.sortBankAccount()
+                self.viewModel.sortBankAccount()
                 
             }
         }
         
         return UIMenu(title: "Menu", children: actions)
     }
-    
-    /// Sorts and updates the bank details list for the selected currency.
-    ///
-    /// This function retrieves the bank accounts for the selected currency from the view model,
-    /// transforms the data into a list of tuples containing relevant details, and updates the
-    /// view model's `bankDetailsList` property. The table view is then reloaded to reflect the changes.
-    ///
-    /// - Complexity: The time complexity of this function is O(n), where 'n' is the number of bank
-    /// accounts in the selected currency's bank account array. The dominant factor is the enumeration
-    /// through the bank account array. Other operations, such as creating tuples and reloading the
-    /// table view, are constant time. This time complexity is suitable for most practical scenarios.
-    ///
-    private func sortBankAccount() {
-        // Retrieve the bank accounts for the selected currency from the view model
-        guard let bankAccount = viewModel.model.bankAccountsByCurrency[viewModel.model.selectedCurrency] else {
-            return
-        }
-        
-        // Transform the bank account data into a list of tuples
-        let bankDetailsList = bankAccount.enumerated().map { (section, item) in
-            return (
-                currencySection: section,
-                bankAccounts: [
-                    ("BANKNAME".localized, item.bank ?? ""),
-                    ("BENEFICIARYBANKACCOUNT".localized, item.iban ?? ""),
-                    ("BIICODE".localized, item.swift ?? ""),
-                    ("BENEFICIARYNAEM".localized, item.beneficiaryName ?? ""),
-                    ("BENEFICIARYBANKADDRESS".localized, item.beneficiaryBankAddress ?? "")
-                ]
-            )
-        }
-        
-        // Update the view model's bank details list and reload the table view
-        viewModel.model.bankDetailsList = bankDetailsList
-        tableView.reloadData()
-    }
+
     private func updateBankAccountDetails() {
         print("msg")
         DispatchQueue.main.async { [weak self] in
@@ -169,7 +134,7 @@ class PaymentViewController: UIViewController {
                 self.updateCurrencyInfo(with: firstItem)
             }
             
-            self.sortBankAccount()
+            self.viewModel.sortBankAccount()
             self.tableView.reloadData()
         }
     }
@@ -201,8 +166,11 @@ class PaymentViewController: UIViewController {
         self.viewModel.bankAccountSubject.sink { [weak self] _ in
             self?.updateBankAccountDetails()
         }.store(in: &subscriptions)
+        self.viewModel.sortingBankAccountSubject.sink { [weak self] _ in
+            self?.tableView.reloadData()
+        }.store(in: &subscriptions)
         self.viewModel.errorPublisher.sink { msg in
-            print(msg)
+            self.showalertview(messagestring: msg)
         }.store(in: &subscriptions)
     }
     
