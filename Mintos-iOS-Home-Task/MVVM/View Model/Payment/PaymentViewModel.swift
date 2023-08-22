@@ -19,6 +19,12 @@ class PaymentViewModel {
     }
     let bankAccountSubject = PassthroughSubject<String, Never>()
     
+    /// Publisher for sorting bank account information.
+    var sortingBankAccountPublisher: AnyPublisher<String, Never> {
+        sortingBankAccountSubject.eraseToAnyPublisher()
+    }
+    let sortingBankAccountSubject = PassthroughSubject<String, Never>()
+    
     /// Publisher for receiving error messages.
     var errorPublisher: AnyPublisher<String, Never> {
         errorSubject.eraseToAnyPublisher()
@@ -38,8 +44,7 @@ class PaymentViewModel {
                     self.handleBankAccountResponse(responseData)
                 } else {
                     // Handle empty response
-                    // self.errorSubject.send("\(response.message ?? "")")
-                    // print(responseData)
+                    self.errorSubject.send(APIError.invalidURL.localizedDescription)
                 }
             case .failure(let error):
                 self.handleAPIError(error)
@@ -50,7 +55,7 @@ class PaymentViewModel {
     // MARK: - Private Helper Methods
     
     /// Handles the bank account response from the API.
-    private func handleBankAccountResponse(_ response: Response) {
+    func handleBankAccountResponse(_ response: Response) {
         self.model.bankDetalisResponse = response
         
         // Extract unique currencies from the response
@@ -88,5 +93,42 @@ class PaymentViewModel {
         } else {
             self.errorSubject.send(error.localizedDescription)
         }
+    }
+    
+    
+    /// Sorts and updates the bank details list for the selected currency.
+    ///
+    /// This function retrieves the bank accounts for the selected currency from the view model,
+    /// transforms the data into a list of tuples containing relevant details, and updates the
+    /// view model's `bankDetailsList` property. The table view is then reloaded to reflect the changes.
+    ///
+    /// - Complexity: The time complexity of this function is O(n), where 'n' is the number of bank
+    /// accounts in the selected currency's bank account array. The dominant factor is the enumeration
+    /// through the bank account array. Other operations, such as creating tuples and reloading the
+    /// table view, are constant time. This time complexity is suitable for most practical scenarios.
+    ///
+    func sortBankAccount() {
+        // Retrieve the bank accounts for the selected currency from the view model
+        guard let bankAccount = self.model.bankAccountsByCurrency[model.selectedCurrency] else {
+            return
+        }
+        
+        // Transform the bank account data into a list of tuples
+        let bankDetailsList = bankAccount.enumerated().map { (section, item) in
+            return (
+                currencySection: section,
+                bankAccounts: [
+                    ("BANKNAME".localized, item.bank ?? ""),
+                    ("BENEFICIARYBANKACCOUNT".localized, item.iban ?? ""),
+                    ("BIICODE".localized, item.swift ?? ""),
+                    ("BENEFICIARYNAEM".localized, item.beneficiaryName ?? ""),
+                    ("BENEFICIARYBANKADDRESS".localized, item.beneficiaryBankAddress ?? "")
+                ]
+            )
+        }
+        
+        // Update the view model's bank details list and reload the table view
+        self.model.bankDetailsList = bankDetailsList
+        self.sortingBankAccountSubject.send("")
     }
 }
