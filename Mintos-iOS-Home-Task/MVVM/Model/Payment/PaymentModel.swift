@@ -22,7 +22,7 @@ struct GetBankAccountResponse: Codable {
 // MARK: - Response
 struct Response: Codable, Equatable {
     static func == (lhs: Response, rhs: Response) -> Bool {
-        return true
+        return lhs.paymentDetails == rhs.paymentDetails && lhs.items?.count == rhs.items?.count
     }
     
     let paymentDetails: String?

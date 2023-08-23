@@ -14,7 +14,6 @@ struct ApisURL {
     static let baseURl = "https://mintos-mobile.s3.eu-central-1.amazonaws.com" 
     
     enum ServiceUrls: String {
-        // MARK: - Common URLs
         // Payment
         case getBankAccounts = "/bank-accounts.json"
     }

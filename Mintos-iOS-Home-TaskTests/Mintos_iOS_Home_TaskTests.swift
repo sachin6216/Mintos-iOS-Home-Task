@@ -26,7 +26,7 @@ final class Mintos_iOS_Home_TaskTests: XCTestCase {
     }
     
     func testBankAccountResponseHandling() {
-        // Create a mock bank account response
+        // Create a dummy bank account response
         let item = Item(bank: "Bank", swift: "SWIFT", currency: "USD", beneficiaryName: "Name", beneficiaryBankAddress: "Address", iban: "IBAN")
         let response = Response(paymentDetails: "123456", items: [item])
         
@@ -38,7 +38,7 @@ final class Mintos_iOS_Home_TaskTests: XCTestCase {
     }
     
     func testSortBankAccount() {
-        // Create a mock bank account
+        // Create a dummy bank account
         let item = Item(bank: "Bank", swift: "SWIFT", currency: "USD", beneficiaryName: "Name", beneficiaryBankAddress: "Address", iban: "IBAN")
         viewModel.model.bankAccountsByCurrency["USD"] = [item]
         viewModel.model.selectedCurrency = "USD"
@@ -64,7 +64,7 @@ final class Mintos_iOS_Home_TaskTests: XCTestCase {
        }
 
     func testSortBankAccountWithInvalidCurrency() {
-        // Create a mock bank account with an invalid currency
+        // Create a dummy bank account with an invalid currency
         let invalidCurrencyItem = Item(bank: "Bank", swift: "SWIFT", currency: nil, beneficiaryName: "Name", beneficiaryBankAddress: "Address", iban: "IBAN")
         viewModel.model.bankAccountsByCurrency["InvalidCurrency"] = [invalidCurrencyItem]
         
@@ -77,7 +77,7 @@ final class Mintos_iOS_Home_TaskTests: XCTestCase {
     
     
     func testSortingWithNoSelectedCurrency() {
-        // Create a mock bank account
+        // Create a dummy bank account
         let item = Item(bank: "Bank", swift: "SWIFT", currency: "USD", beneficiaryName: "Name", beneficiaryBankAddress: "Address", iban: "IBAN")
         viewModel.model.bankAccountsByCurrency["USD"] = [item]
 //        viewModel.model.selectedCurrency = "USD"

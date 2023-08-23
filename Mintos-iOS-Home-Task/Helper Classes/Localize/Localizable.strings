@@ -16,6 +16,6 @@
 "OK" = "Ok";
 "TEXTHASBEENCOPIEDSUCCESSFULLY" = "has been copied successfully.";
 "INVESTORID" = "Investor ID";
-"" = "";
-"" = "";
-"" = "";
+"OOPSSOMETHINGSNOTQUITERIGHTWITHYOURREQUEST" = "Oops! Something's not quite right with your request.";
+"OOPSWEREFACINGSOMETECHNICALDIFFICULTIESPLEASETRYAGAINLATER" = "Oops! We're facing some technical difficulties. Please try again later.";
+"OOPSSOMETHINGUNEXPECTEDHAPPENEDPLEASETRYAGAINLATER" = "Oops! Something unexpected happened. Please try again later.";
