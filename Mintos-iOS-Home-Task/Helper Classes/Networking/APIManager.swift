@@ -51,24 +51,31 @@ class APIManager {
                 let statusCode = httpResponse.statusCode
                 print("\n Status code: \(String(describing: statusCode))")
                 
-                if !(200...299).contains(statusCode) {
-                    completion(.failure(APIError.statusCodeError(statusCode)))
-                    return
+                switch statusCode {
+                case 200:
+                    do {
+                        let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+                        completion(.success(decodedResponse))
+                    } catch {
+                        if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? T {
+                            completion(.success(jsonData))
+                        } else {
+                            completion(.failure(APIError.decodingError))
+                        }
+                    }
+                case 201...299:
+                    completion(.failure(APIError.noData))
+                case 400...405:
+                    completion(.failure(APIError.errorMsg("OOPSSOMETHINGSNOTQUITERIGHTWITHYOURREQUEST".localized)))
+                case 500...505:
+                    completion(.failure(APIError.errorMsg("OOPSWEREFACINGSOMETECHNICALDIFFICULTIESPLEASETRYAGAINLATER".localized)))
+                default:
+                    completion(.failure(APIError.errorMsg("OOPSSOMETHINGUNEXPECTEDHAPPENEDPLEASETRYAGAINLATER".localized)))
                 }
+
             }
             
-            do {
-                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(decodedResponse))
-            } catch let error {
-                print(error)
-                if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? T {
-                    completion(.success(jsonData))
-                } else {
-                    completion(.failure(APIError.decodingError))
-                }
-                completion(.failure(APIError.decodingError))
-            }
+            
         }
         
         dataTask?.resume()
