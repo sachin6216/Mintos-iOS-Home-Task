@@ -140,10 +140,10 @@ class PaymentViewController: UIViewController {
     // MARK: - APIs
     /// Set up subscribers for observing ViewModel events.
     func subscribers() {
-        self.viewModel.bankAccountSubject.sink { [weak self] _ in
+        self.viewModel.bankAccountPublisher.sink { [weak self] _ in
             self?.updateBankAccountDetails()
         }.store(in: &subscriptions)
-        self.viewModel.sortingBankAccountSubject.sink { [weak self] _ in
+        self.viewModel.sortingBankAccountPublisher.sink { [weak self] _ in
             self?.tableView.reloadData()
         }.store(in: &subscriptions)
         self.viewModel.errorPublisher.sink { msg in

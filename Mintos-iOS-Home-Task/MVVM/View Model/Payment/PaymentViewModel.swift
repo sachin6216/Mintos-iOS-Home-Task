@@ -17,19 +17,19 @@ class PaymentViewModel {
     var bankAccountPublisher: AnyPublisher<String, Never> {
         bankAccountSubject.eraseToAnyPublisher()
     }
-    let bankAccountSubject = PassthroughSubject<String, Never>()
+    private let bankAccountSubject = PassthroughSubject<String, Never>()
     
     /// Publisher for sorting bank account information.
     var sortingBankAccountPublisher: AnyPublisher<String, Never> {
         sortingBankAccountSubject.eraseToAnyPublisher()
     }
-    let sortingBankAccountSubject = PassthroughSubject<String, Never>()
+    private let sortingBankAccountSubject = PassthroughSubject<String, Never>()
     
     /// Publisher for receiving error messages.
     var errorPublisher: AnyPublisher<String, Never> {
         errorSubject.eraseToAnyPublisher()
     }
-    let errorSubject = PassthroughSubject<String, Never>()
+    private let errorSubject = PassthroughSubject<String, Never>()
     
     // MARK: - API Request
     
