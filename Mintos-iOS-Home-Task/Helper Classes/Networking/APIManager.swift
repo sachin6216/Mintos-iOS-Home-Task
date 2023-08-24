@@ -66,20 +66,16 @@ class APIManager {
                 case 201...299:
                     completion(.failure(APIError.noData))
                 case 400...405:
-                    completion(.failure(APIError.errorMsg("OOPSSOMETHINGSNOTQUITERIGHTWITHYOURREQUEST".localized)))
+                    completion(.failure(APIError.errorMsg("OOPSSOMETHINGSYOURREQUEST".localized)))
                 case 500...505:
-                    completion(.failure(APIError.errorMsg("OOPSWEREFACINGSOMETECHNICALDIFFICULTIESPLEASETRYAGAINLATER".localized)))
+                    completion(.failure(APIError.errorMsg("OOPSWEREFACINGPLEASETRYAGAINLATER".localized)))
                 default:
-                    completion(.failure(APIError.errorMsg("OOPSSOMETHINGUNEXPECTEDHAPPENEDPLEASETRYAGAINLATER".localized)))
+                    completion(.failure(APIError.errorMsg("OOPSPLEASETRYAGAINLATER".localized)))
                 }
-
             }
-            
-            
         }
         
         dataTask?.resume()
-        
     }
     
     private func buildURL() -> URL? {
